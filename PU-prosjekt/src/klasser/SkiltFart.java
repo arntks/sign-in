@@ -1,4 +1,4 @@
-package sprint1;
+package klasser;
 
 public class SkiltFart {
 
