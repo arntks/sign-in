@@ -1,5 +1,5 @@
 package sprint1;
 
-public class SkiltFart {
+public class SkiltFart extends Skilt {
 
 }
