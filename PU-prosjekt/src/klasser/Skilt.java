@@ -1,4 +1,4 @@
-package klasser;
+package sprint1;
 
 public abstract class Skilt {
 	

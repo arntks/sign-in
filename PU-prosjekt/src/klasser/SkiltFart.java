@@ -1,14 +1,5 @@
-package klasser;
+package sprint1;
 
-public class SkiltFart extends Skilt{
-	
-	public void Skiltfar(){
-		
-	}
+public class SkiltFart {
 
-	@Override
-	public void hentBilde() {
-		// TODO Auto-generated method stub
-		
-	}
 }

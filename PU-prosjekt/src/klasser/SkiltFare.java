@@ -1,4 +1,4 @@
-package klasser;
+package sprint1;
 
 public class SkiltFare extends Skilt{
 	
