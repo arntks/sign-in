@@ -1,1 +1,33 @@
-/klasser/
+# Virtualenv
+venv
+
+# Django
+db.sqlite3
+
+# Python
+*.pyc
+*.db    
+
+# Mac garbage files
+.DS_Store
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# Pycharm and IDEA
+/.idea
+
+# This project
+staticroot/*
+
+#Server
+teknologiporten/settings.py
+app/templatetags/css_folder.py
+teknologiporten/etc/
+
+.sass-cache/
+
+app/migrations/
+internal/migrations/
+media/
