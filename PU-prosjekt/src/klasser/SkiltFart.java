@@ -2,11 +2,17 @@ package klasser;
 
 public class SkiltFart extends Skilt{
 	
-	private int fartsgrense;
+	
+	public SkiltFart(int skiltnr){
+		this.skiltnr = skiltnr;
+		this.skiltgruppe = 3;
+	}
+	
+	
 
 	@Override
 	public void hentBilde() {
-		// TODO Auto-generated method stub
+		//Henter ut bilde
 		
 	}
 
