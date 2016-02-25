@@ -14,5 +14,6 @@ public abstract class Skilt {
 	}
 	
 	public abstract void hentBilde();
+	//metode som henter ut bilde basert på skiltnr og gruppe
 	
 }
