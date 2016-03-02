@@ -10,9 +10,14 @@ public class Splitt {
 	private int skiltgr;
 	private int skiltnr;
 	private String tekst;
+	private String filNavn;
 	
-	public Splitt(File fil){
-		this.fil = fil;
+	public Splitt(String fil){
+		this.fil = new File (fil);
+	}
+	
+	public File getFile(){
+		return this.fil;
 	}
 	
 	
@@ -20,9 +25,10 @@ public class Splitt {
 			Scanner scanner;
 			this.tekst = null;
 			try {
-				scanner = new Scanner(this.fil);
+				scanner = new Scanner(fil);
 				while(scanner.hasNextLine()){
 					String skilt = scanner.nextLine();
+					System.out.println(skilt);
 					String[] s = skilt.split("#");
 					this.skiltgr = Integer.parseInt(s[0]);
 					this.skiltnr = Integer.parseInt(s[1]);
@@ -30,7 +36,7 @@ public class Splitt {
 					if (s[2] != null){
 						this.tekst = s[2];
 					}
-			}	
+				}	
 			
 			scanner.close();
 			} catch (FileNotFoundException e) {
@@ -51,5 +57,4 @@ public class Splitt {
 		}
 		
 	}
-
 }
