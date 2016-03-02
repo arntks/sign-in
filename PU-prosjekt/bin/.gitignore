@@ -31,3 +31,4 @@ teknologiporten/etc/
 app/migrations/
 internal/migrations/
 media/
+/klasser/

@@ -1,18 +1,20 @@
 package klasser;
 
 import java.util.Scanner;
+import java.io.File;
 
 public class runSignIn {
 	
 	public static void main(String[] args){
-		String nøkkel = lesKort();
-		System.out.println(nøkkel);
+		File nøkkel = lesKort();
+		Splitt fil = new Splitt(nøkkel);
+		fil.dele();
 	}
 
-	private static String lesKort(){
-		Scanner scanner = new Scanner(System.in);
-		String kortnr = scanner.next();
-		scanner.close();
+	private static File lesKort(){
+		Scanner input = new Scanner(System.in);
+		File kortnr = new File(input.nextLine());
+		input.close();
 		return kortnr;
 	}
 	
