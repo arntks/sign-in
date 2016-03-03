@@ -12,7 +12,6 @@ public class Splitt {
 	private int skiltgr;
 	private int skiltnr;
 	private String tekst;
-	private String filNavn;
 	private ArrayList<Skilt> skiltGruppe = new ArrayList<Skilt>();
 	
 	public Splitt(String fil){
@@ -45,10 +44,6 @@ public class Splitt {
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();}
 			}
-
-	public Splitt(File fil){
-		this.fil = fil;
-	}
 
 	public void makeSkilt(){
 		
