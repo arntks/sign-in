@@ -5,7 +5,7 @@ public class SkiltFart extends Skilt{
 	
 	public SkiltFart(int skiltnr){
 		this.skiltnr = skiltnr;
-		this.skiltgruppe = 3;
+		this.skiltgruppe = 1;
 	}
 	
 	

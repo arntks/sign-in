@@ -15,8 +15,12 @@ public class runSignIn {
 		ArrayList<Skilt> skilt = splitt.getSkiltGruppe();
 		
 		for (int i = 0; i < skilt.size(); i++){
-			System.out.println("Skiltgruppe: " + skilt.get(i).getSkiltgruppe() +
-					", Skiltnummer: " + skilt.get(i).getSkiltnr());
+			String print = "Skiltgruppe: " + skilt.get(i).getSkiltgruppe() +
+					", Skiltnummer: " + skilt.get(i).getSkiltnr();
+			if (skilt.get(i).getSkiltgruppe() == 2){
+				print = print + ", Skilttekst: " +((Skilt_med_tekst) skilt.get(i)).hentTekst();
+			}
+			System.out.println(print);
 		}
 	}
 

@@ -35,7 +35,7 @@ public class Splitt {
 					this.skiltgr = Integer.parseInt(s[0]);
 					this.skiltnr = Integer.parseInt(s[1]);
 					
-					if (s.length < 2){
+					if (s.length > 2){
 						this.tekst = s[2];
 					}
 				this.makeSkilt();
