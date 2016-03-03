@@ -10,7 +10,6 @@ public class Splitt {
 	private int skiltgr;
 	private int skiltnr;
 	private String tekst;
-<<<<<<< HEAD
 	private String filNavn;
 	
 	public Splitt(String fil){
@@ -41,37 +40,11 @@ public class Splitt {
 			
 			scanner.close();
 			} catch (FileNotFoundException e) {
-				e.printStackTrace();
+				e.printStackTrace();}
 			}
-=======
 
 	public Splitt(File fil){
 		this.fil = fil;
-	}
-
-
-	public void dele(){
-		Scanner scanner;
-		this.tekst = null;
-		try {
-			scanner = new Scanner(this.fil);
-			while(scanner.hasNextLine()){
-				String skilt = scanner.nextLine();
-				String[] line = skilt.split("#", 2);
-				this.skiltgr = Integer.parseInt(line[0]);
-				this.skiltnr = Integer.parseInt(line[1]);
-
-				if (line[2] != null){
-					this.tekst = line[2];
-				}
-			}	
-
-			scanner.close();}
-		catch (FileNotFoundException ex) 
-		{
-			System.out.println("File does not found");
-		}
->>>>>>> 0113966b8ef654e54377d951fb749be321479cd7
 	}
 
 	public void makeSkilt(){
