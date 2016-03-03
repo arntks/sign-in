@@ -28,12 +28,11 @@ public class Splitt {
 				scanner = new Scanner(fil);
 				while(scanner.hasNextLine()){
 					String skilt = scanner.nextLine();
-					System.out.println(skilt);
 					String[] s = skilt.split("#");
 					this.skiltgr = Integer.parseInt(s[0]);
 					this.skiltnr = Integer.parseInt(s[1]);
 					
-					if (s[2] != null){
+					if (s.length < 2){
 						this.tekst = s[2];
 					}
 				}	

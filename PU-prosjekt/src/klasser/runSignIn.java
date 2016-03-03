@@ -7,7 +7,7 @@ public class runSignIn {
 	
 	
 	public static void main(String[] args){
-		String nøkkel = lesKort();
+		String nøkkel = lesKort() + ".txt";
 		Splitt splitt = new Splitt(nøkkel);
 		File fil = splitt.getFile();
 		splitt.dele(fil);
