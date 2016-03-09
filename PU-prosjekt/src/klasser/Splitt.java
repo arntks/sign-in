@@ -3,15 +3,11 @@ package klasser;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Splitt {
 
 	private File fil;
-	private int skiltgr;
-	private int skiltnr;
-	private String tekst;
 	private ArrayList<Skilt> skiltGruppe = new ArrayList<Skilt>();
 	
 	public Splitt(String fil){
@@ -25,19 +21,21 @@ public class Splitt {
 	
 	public void dele(File fil){
 			Scanner scanner;
-			this.tekst = null;
+			String tekst = null;
+			int skiltgr;
+			int skiltnr;
 			try {
 				scanner = new Scanner(fil);
 				while(scanner.hasNextLine()){
 					String skilt = scanner.nextLine();
 					String[] s = skilt.split("#");
-					this.skiltgr = Integer.parseInt(s[0]);
-					this.skiltnr = Integer.parseInt(s[1]);
+					skiltgr = Integer.parseInt(s[0]);
+					skiltnr = Integer.parseInt(s[1]);
 					
 					if (s.length > 2){
-						this.tekst = s[2];
+						tekst = s[2];
 					}
-				this.makeSkilt();
+				this.makeSkilt(skiltgr, skiltnr, tekst);
 				}	
 			
 			scanner.close();
@@ -45,7 +43,7 @@ public class Splitt {
 				e.printStackTrace();}
 			}
 
-	public void makeSkilt(){
+	public void makeSkilt(int skiltgr, int skiltnr, String tekst){
 		
 		if(skiltgr == 1){
 			this.skiltGruppe.add(new SkiltFart(skiltnr));
